@@ -1,5 +1,8 @@
 public class MatrixCellSelection {
      static int backtrack(int[][] M, boolean[] S, int k) {
+         if(M.length == 0) {
+             return Integer.MAX_VALUE;
+         }
         if (k == S.length - 1) {
             // matrix is size lMatrix X lMatrix
             int lMatrix = M.length;
@@ -50,7 +53,7 @@ public class MatrixCellSelection {
                 boolean intermediateCorrectSolution = false;
 
                 for(int j = 0; j < lMatrix; j++) {
-                    intermediateCorrectSolution = intermediateCorrectSolution || (MIntermediate[i][j] == 1);
+                    intermediateCorrectSolution = intermediateCorrectSolution || (MIntermediate[j][i] == 1);
                 }
 
                 if(intermediateCorrectSolution == false) {
@@ -93,4 +96,3 @@ public class MatrixCellSelection {
         System.out.println(backtrack(M, S, -1));
     }
 }
-
