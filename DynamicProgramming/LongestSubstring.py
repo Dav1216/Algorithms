@@ -18,4 +18,24 @@ def longest_subsequence(X, Y):
     return c[len(X)][len(Y)]
 
 
-print(longest_subsequence(X, Y))
+result = ""
+
+
+def print_subsequence(X, Y, i, j):
+    global result
+    if i == 0 or j == 0:
+        pass
+    elif X[i - 1] == Y[j - 1]:
+        print_subsequence(X, Y, i - 1, j - 1);
+        result += X[i - 1]
+    elif c[i][j] > c[i][j - 1]:
+        print_subsequence(X, Y, i - 1, j)
+    else:
+        print_subsequence(X, Y, i, j - 1)
+
+    return result
+
+
+length = longest_subsequence(X, Y)
+print(length)
+print(print_subsequence(X, Y, len(X), len(Y)))
