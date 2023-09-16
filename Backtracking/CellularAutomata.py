@@ -10,28 +10,20 @@ def apply_function(a: bool, b: bool, c: bool) -> bool:
     """This computes an element in state T + 1 based on the three elements above
     in state T"""
     if a is False and b is False and c is False:
-        # print("aici1")
         return False
     elif a is False and b is False and c is True:
-        # print("aici2")
         return True
     elif a is False and b is True and c is False:
-        # print("aici3")
         return True
     elif a is False and b is True and c is True:
-        # print("aici4")
         return True
     elif a is True and b is False and c is False:
-        # print("aici5")
         return True
     elif a is True and b is False and c is True:
-        # print("aici6")
         return False
     elif a is True and b is True and c is False:
-        # print("aici7")
         return False
     elif a is True and b is True and c is True:
-        # print("aici8")
         return False
 
 
