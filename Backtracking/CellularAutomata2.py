@@ -39,7 +39,7 @@ def has_pre_image(arr, i, S):
                     if result1 is True:
                         return True
 
-            elif (S[i - 1] != 2 and S[i] != 2) and el1 == S[i - 1] and el2 == S[i]:
+            elif el1 == S[i - 1] and el2 == S[i]:
                 S[i - 1], S[i], S[i + 1] = el1, el2, el3
                 result2 = has_pre_image(arr, i + 1, S)
 
