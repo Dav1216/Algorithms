@@ -1,3 +1,8 @@
+# given an cellular automaton state, find out if it has a
+# pre-image (a state that when applied a trasnformation apply_function
+# on each element of it, it results in the initial cellular automaton state)
+# this is a brute force approach
+
 function_map = {
     0: [(1, 1, 1), (0, 0, 0), (1, 0, 1), (1, 1, 0)],
     1: [(0, 0, 1), (0, 1, 0), (0, 1, 1), (1, 0, 0)]
