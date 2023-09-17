@@ -1,9 +1,9 @@
 import numpy as np
 
 # given an cellular automaton state, find out if it has a
-# pre-image (a state that when applied a trasnformation apply_function
-# on each element of it, it results in the initial cellular automaton state)
-# this is a brute force approach
+# pre-image (a state that when applied a transformation of the type (0, 0, 0) -> 0 
+# (pre-image[i - 1], pre-image[i], pre-image[i + 1]) -> arr[i]
+# on each three consecutive elements of it), it results in the initial cellular automaton state)
 
 function_map = {
     0: [(1, 1, 1), (0, 0, 0), (1, 0, 1), (1, 1, 0)],
